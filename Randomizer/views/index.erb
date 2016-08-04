@@ -1,0 +1,30 @@
+<div class='container'>
+  <h1>Team Randomizer</h1>
+</div>
+
+<div class='container'>
+  <form action='/' method='POST'>
+    </div>
+    <div>
+      <label>Insert Team Names here (separate name with ',')</label>
+      <textarea name="array" rows="10" class='span12'><%=$arr%></textarea>
+    </div>
+    <div>
+      <label>Number of teams OR number people per team</label>
+      <input type='text' name='num' id='num' value='<%=@num%>' />
+      <select class='span2' name='type'>
+        <option value='team'>teams</option>
+        <option value='ppl'>people/team</option>
+      </select>
+    </div>
+    <div>
+      <input type='submit' class='btn btn-info' value='Randomize' style='margin-top: 20px'/>
+    </div>
+  </form>
+</div>
+
+<div class='container'>
+  <%@ans.each do |x| %>
+    <h1><%=x.join(", ")%></h1>
+  <%end%>
+</div>
